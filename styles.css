@@ -1,0 +1,56 @@
+:root {
+  --bg: #07111f;
+  --bg-2: #0c1b2d;
+  --card: rgba(255, 255, 255, 0.08);
+  --stroke: rgba(255, 255, 255, 0.14);
+  --text: #f5f7fb;
+  --muted: #b9c3d1;
+  --primary: #7c9cff;
+  --primary-2: #5eead4;
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  --radius: 24px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(124, 156, 255, 0.18), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(94, 234, 212, 0.10), transparent 25%),
+    linear-gradient(180deg, var(--bg), var(--bg-2));
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  width: min(1150px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image:
+    radial-gradient(circle at 20% 20%, #fff 0.6px, transparent 0.8px),
+    radial-gradient(circle at 80% 40%, #fff 0.6px, transparent 0.8px),
+    radial-gradient(circle at 40% 80%, #fff 0.6px, transparent 0.8px);
+  background-size: 120px 120px;
+}
+
+.bg-orb {
+  position: fixed;
+  border-radius: 999px;
+  filter: blur(70px);
+  opacity: 0.35;
+}
